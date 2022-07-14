@@ -7,7 +7,7 @@
 
   <node pkg="tf" type="static_transform_publisher" name="base_to_depth2laser1" args="0.34 0.00 0.5 0 0 0  base_footprint laser1 100" />
 
-  <node name="depth2laser1" pkg="depthimage_to_laserscan" type="depthimage_to_laserscan"  args= "standalone depthimage_to_lasersacn/DepthImageToLaserScanNodelet">
+  <node name="depth2laser1" pkg="depthimage_to_laserscan" type="depthimage_to_laserscan"  args= "standalone depthimage_to_laserscan/DepthImageToLaserScanNodelet">
     <remap from="image" to="/camera/depth/image"/>
     <remap from="camera_info" to="/camera/depth/camera_info"/>
 
@@ -22,7 +22,7 @@
 
   <node pkg="tf" type="static_transform_publisher" name="base_to_depth2laser2" args="0.34 0.00 0.1 0 0 0  base_footprint laser2 100" />
 
-  <node name="depth2laser2" pkg="depthimage_to_laserscan" type="depthimage_to_laserscan"  args= "standalone depthimage_to_lasersacn/DepthImageToLaserScanNodelet">
+  <node name="depth2laser2" pkg="depthimage_to_laserscan" type="depthimage_to_laserscan"  args= "standalone depthimage_to_laserscan/DepthImageToLaserScanNodelet">
     <remap from="image" to="/camera/depth/image"/>
     <remap from="camera_info" to="/camera/depth/camera_info"/>
 
