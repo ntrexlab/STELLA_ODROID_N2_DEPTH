@@ -1,4 +1,0 @@
-<launch>
-  <include file='$(find stella_follower)/launch/nodes/laserTracker.launch' />
-  <include file='$(find stella_follower)/launch/nodes/laserfollow.launch' />
-</launch>
