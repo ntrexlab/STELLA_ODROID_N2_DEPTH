@@ -1,0 +1,34 @@
+<launch>
+	<include file="$(find stella_md)/launch/stella_mwdriver.launch">
+	</include>
+	<include file="$(find stella_ahrs)/launch/stella_imu.launch">
+	</include>
+	<include file="$(find ydlidar)/launch/stella_lds.launch">
+	</include>
+	<include file="$(find astra_camera)/launch/astra.launch">
+	</include>
+
+    <node name="depth2laser1" pkg="depthimage_to_laserscan" type="depthimage_to_laserscan"  args= "standalone depthimage_to_laserscan/DepthImageToLaserScanNodelet">
+        <remap from="image" to="/camera/depth/image"/>
+        <remap from="camera_info" to="/camera/depth/camera_info"/>
+
+        <param name="range_min" type="double" value="0.45"/>
+        <param name="range_max" type="double" value="4"/>
+        <param name="scan_height" type="int" value="10"/>
+        <param name="output_frame_id" type="str" value="laser1"/>
+
+        <remap from="scan" to="/depth_scan"/>
+    </node>
+
+    <node name="depth2laser2" pkg="depthimage_to_laserscan" type="depthimage_to_laserscan"  args= "standalone depthimage_to_laserscan/DepthImageToLaserScanNodelet">
+        <remap from="image" to="/camera/depth/image"/>
+        <remap from="camera_info" to="/camera/depth/camera_info"/>
+
+        <param name="range_min" type="double" value="0.45"/>
+        <param name="range_max" type="double" value="4"/>
+        <param name="scan_height" type="int" value="250"/>
+        <param name="output_frame_id" type="str" value="laser2"/>
+
+        <remap from="scan" to="/depth_scan2"/>
+    </node>
+</launch>
