@@ -9,7 +9,7 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
 
 if __name__=="__main__":
-    cap = cv2.VideoCapture('/dev/CAMERA')
+    cap = cv2.VideoCapture('/dev/C920')
         
     rospy.init_node('stella_camera_node')
     bridge = CvBridge()

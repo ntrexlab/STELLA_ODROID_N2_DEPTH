@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>stella_bringup</name>
+  <name>stella_3d_slam</name>
   <version>0.0.0</version>
-  <description>The stella_bringup package</description>
+  <description>The stella_3d_slam package</description>
 
   <maintainer email="lab@ntrex.co.kr">ntrex</maintainer>
   <license>Apache 2.0</license>
+
   <!-- The *depend tags are used to specify dependencies -->
   <!-- Dependencies can be catkin packages or system dependencies -->
   <!-- Examples: -->
@@ -27,10 +28,18 @@
   <!-- Use doc_depend for packages you need only for building documentation: -->
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>roscpp</build_depend>
-  <build_export_depend>roscpp</build_export_depend>
-  <exec_depend>roscpp</exec_depend>
-
+  <depend>actionlib</depend>
+  <depend>actionlib_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>message_generation</depend>
+  <depend>nav_msgs</depend>
+  <depend>roscpp</depend>
+  <depend>serial</depend>
+  <depend>roslib</depend>
+  <depend>rospy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>tf</depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
