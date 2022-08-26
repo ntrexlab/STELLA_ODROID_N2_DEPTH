@@ -108,7 +108,7 @@ void ntrex_can_fifo::readStatus()
         transform.setOrigin( tf::Vector3(x, y,0));
         transform.setRotation(tf::Quaternion(Quaternion.x,Quaternion.y,Quaternion.z,Quaternion.w));
 
-        odom_broadcaster.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "odom", "ba$
+        odom_broadcaster.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "odom", "base_footprint"));
 
         nav_msgs::Odometry odom;
 
